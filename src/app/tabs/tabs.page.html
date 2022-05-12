@@ -1,0 +1,38 @@
+<ion-tabs>
+
+  <div class="osahan-menu-fotter border rounded shadow fixed-bottom bg-white m-3 px-3 py-2 text-center">
+    <div class="row">
+       <div class="col " [ngClass]="homesel" (click)="home()">
+          <a  class="text-dark small font-weight-bold text-decoration-none">
+             <p class="h4 m-0"><i class="feather-home "></i></p>
+             Home
+          </a>
+       </div>
+       <div class="col" [ngClass]="trendingsel" (click)="trending()">
+          <a  class="text-dark small font-weight-bold text-decoration-none">
+             <p class="h4 m-0"><i class="feather-map-pin"></i></p>
+             Trending
+          </a>
+       </div>
+       <div class="col " [ngClass]="findsel" (click)="find()">
+         <a  class="text-dark small font-weight-bold text-decoration-none">
+            <p class="h4 m-0"><i class="feather-search"></i></p>
+            Find
+         </a>
+       </div>
+       <div class="col" [ngClass]="favsel" (click)="fav()">
+          <a  class="text-dark small font-weight-bold text-decoration-none">
+             <p class="h4 m-0"><i class="feather-heart"></i></p>
+             Favorites
+          </a>
+       </div>
+       <div class="col"  [ngClass]="profilesel"  (click)="profile()">
+          <a  class="text-dark small font-weight-bold text-decoration-none" >
+             <p class="h4 m-0"><i class="feather-user"></i></p>
+             Profile
+          </a>
+       </div>
+    </div>
+ </div>
+
+</ion-tabs>

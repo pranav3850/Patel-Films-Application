@@ -1,0 +1,761 @@
+<ion-header>
+  <div class=" p-3 homepage-osahan-header bg-light">
+    <div class="title d-flex align-items-center">
+      <div style="margin-left:32% !important">
+        <a class="text-dark d-flex align-items-center">
+
+          <img src="../../assets/img/newpatellogo.png" style="width:120px;" />
+
+        </a>
+      </div>
+
+
+    </div>
+
+    <div>
+
+      <ion-row style="height:30px;">
+        <ion-col size="3" style=" border-bottom-width: 3px;border-bottom-style: solid;border-color: #f8f9fa; height:42px!important;"
+          [style.border-color]="homeclr" (click)="openhome()">
+          <a class="d-block text-center" style="font-weight: bold;font-size: 0.6rem;">Home</a>
+        </ion-col>
+        <ion-col size="3" style=" border-bottom-width: 3px;border-bottom-style: solid;border-color: #f8f9fa;height:42px!important;"
+          [style.border-color]="tvclr" (click)="opentvshow()">
+          <a class="d-block text-center" style="font-weight: bold;font-size: 0.6rem;">Live Shows</a>
+        </ion-col>
+        <ion-col size="3" style=" border-bottom-width: 3px;border-bottom-style: solid;border-color: #f8f9fa;height:42px!important;"
+          [style.border-color]="movieclr" (click)="openmovie()">
+          <a class="d-block text-center" style="font-weight: bold;font-size: 0.6rem;">Movies</a>
+        </ion-col>
+        <ion-col size="3" style=" border-bottom-width: 3px;border-bottom-style: solid;border-color: #f8f9fa;height:42px!important;"
+          [style.border-color]="kidsclr" (click)="openkid()">
+          <a class="d-block text-center" style="font-weight: bold;font-size: 0.6rem;">Kids</a>
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+  </div>
+</ion-header>
+
+<ion-content style="overflow-x: scroll;">
+
+
+
+  <div class="offer-slider bg-white border-top border-bottom">
+    <ion-slides pager="false" [options]="BannerOption" #slideone autoplay="1500"
+      style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+      <ion-slide (click)="openDetails()">
+        <div class="cat-item px-1 py-3">
+          <a class="d-block text-center">
+            <img src="../../assets/img/ringofdesirenew.jpeg" style="height:100%;width:100%" class="img-fluid   ">
+          </a>
+        </div>
+      </ion-slide>
+
+      <ion-slide (click)="openDetails()">
+        <div class="cat-item px-1 py-3">
+          <a class="d-block text-center">
+            <img src="../../assets/img/mrdeshee.jpg" class="img-fluid ">
+          </a>
+        </div>
+      </ion-slide>
+      <ion-slide (click)="openDetails()">
+        <div class="cat-item px-1 py-3">
+          <a class="d-block text-center">
+            <img src="../../assets/img/deathclub.jpg" class="img-fluid   ">
+          </a>
+        </div>
+      </ion-slide>
+      <ion-slide (click)="openDetails()">
+        <div class="cat-item px-1 py-3">
+          <a class="d-block text-center">
+            <img src="../../assets/img/mrdeshee.jpg" class="img-fluid   ">
+          </a>
+        </div>
+      </ion-slide>
+
+
+
+    </ion-slides>
+  </div>
+  <!-- Most popular -->
+  <div *ngIf="showHome || showMovie">
+    <div class="px-3 pt-4 pb-3 title d-flex align-items-center">
+      <h5 class="m-0 font-weight-bold">Most popular</h5>
+      <!-- <a class="font-weight-bold ml-auto" href="most_popular.html">26 places <i
+            class="feather-chevrons-right"></i></a> -->
+    </div>
+    <!-- Most popular -->
+    <div class="most_popular px-3">
+      <ion-slides pager="false" [options]="BannerOption2" #slideone autoplay="2000"
+        style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div> -->
+                  <!-- <div class="member-plan position-absolute"><span class="badge badge-danger">HOT</span></div> -->
+                  <a>
+                    <img src="../../assets/img/ringofdesirenew.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Ring Of Desire
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>60% NEW50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      2.4</span></div>
+                  <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                    <div class="member-plan position-absolute"><span class="badge badge-warning">Buy 1 Get 1 free</span>
+                    </div> -->
+                  <a   >
+                    <img src="../../assets/img/mrdeshee.jpg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a    class="text-black">The Journey of Mr. Deshee</a></h6>
+                    <p class="text-gray mb-1 small">Family / Drama
+                    <p class="text-gray mb-1 rating">
+
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>50% off</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+
+                  <a   >
+                    <img src="../../assets/img/ringofdesirenew.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a    class="text-black">Ring Of desire
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>60% NEW50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      2.4</span></div>
+                  <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                    <div class="member-plan position-absolute"><span class="badge badge-warning">Buy 1 Get 1 free</span>
+                    </div> -->
+                  <a   >
+                    <img src="../../assets/img/deathclub.jpg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a    class="text-black">The death Club</a></h6>
+                    <p class="text-gray mb-1 small">English Horror
+                    <p class="text-gray mb-1 rating">
+
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>50% off</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                    <div class="member-plan position-absolute"><span class="badge badge-danger">HOT</span></div> -->
+                  <a   >
+                    <img src="../../assets/img/mrdeshee.jpg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a    class="text-black">The Journey of Mr. Deshee
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Family / Drama
+                    <p class="text-gray mb-1 rating">
+
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>60% NEW50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      2.4</span></div>
+                  <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                    <div class="member-plan position-absolute"><span class="badge badge-warning">Buy 1 Get 1 free</span>
+                    </div> -->
+                  <a   >
+                    <img src="../../assets/img/deathclub.jpg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body" style="line-height: 0.7rem;">
+                    <h6 style="margin-top: -5px;"><a    class="text-black">The Death Club</a></h6>
+                    <p class="text-gray mb-1 small">English Horror
+                    <p class="text-gray mb-1 rating">
+
+
+                  </div>
+                  <div class="list-card-badge d-flex align-items-center">
+                    <span class="badge badge-danger mr-2">OFFER</span> <small>50% off</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+  <!-- Languages Slider -->
+  <div *ngIf="showHome || showMovie">
+    <div class="px-3 pt-4 pb-3 title d-flex align-items-center">
+      <h5 class="m-0 font-weight-bold">Watche in Your Languages</h5>
+
+    </div>
+    <!-- Most popular -->
+    <div class="most_popular px-3" style="padding-top: 15px;">
+      <ion-slides pager="false" [options]="BannerOption" #slideone autoplay="2500"
+        style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+
+                  <a>
+                    <img src="../../assets/img/hindi.webp" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Hindi
+                      </a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/english.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">English</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/telugu.jpg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Telugu
+                      </a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/hindi.webp" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Hindi</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!--  popular shows -->
+  <div *ngIf="showHome || showTv">
+    <div class="px-3 pt-4 pb-3 title d-flex align-items-center">
+      <h5 class="m-0 font-weight-bold">Popular Shows</h5>
+      <!-- <a class="font-weight-bold ml-auto" href="most_popular.html">26 places <i
+            class="feather-chevrons-right"></i></a> -->
+    </div>
+    <!-- Most popular -->
+    <div class="most_popular px-3">
+      <ion-slides pager="false" [options]="BannerOption1" #slideone autoplay="1000"
+        style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+        <ion-slide>
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+                  <a>
+                    <img src="../../assets/img/liveshow.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Speakeasy-2022
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Thriler
+                    <p class="text-gray mb-1 rating">
+                    <ul class="rating-stars list-unstyled">
+                      <li>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star star_active"></i>
+                        <i class="feather-star"></i>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+
+    </div>
+
+  </div>
+  <!-- Trending this week -->
+  <div *ngIf="showHome">
+    <div class="px-3 pt-3 title d-flex align-items-center">
+      <h5 class="m-0 font-weight-bold">Trending this week</h5>
+      <a class="font-weight-bold ml-auto"   >View all <i class="feather-chevrons-right"></i></a>
+    </div>
+    <!-- slider -->
+    <div class="trending-slider" style="padding-top: 15px;">
+      <ion-slides pager="false" [options]="BannerOption2" #slideone autoplay="2000"
+        style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+        <ion-slide (click)="openDetails()">
+          <div class="osahan-slider-item py-3 px-1">
+            <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+              <div class="list-card-image">
+                <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                    3.4</span></div>
+                <!-- <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                <div class="member-plan position-absolute"><span class="badge badge-danger">HOT</span></div> -->
+                <a   >
+                  <img src="../../assets/img/ringofdesirenew.jpeg" class="img-fluid item-img w-100">
+                </a>
+              </div>
+              <div class="p-3 position-relative" style="height: 75px !important;">
+                <div class="list-card-body">
+                  <h6 style="margin-top: -0.5rem;"><a class="text-black">Ring Of Desire
+                    </a>
+                  </h6>
+                  <p class="text-gray mb-3">Thriler
+                  <p class="text-gray mb-3 time"><span class="bg-light text-dark  " style="margin-left: -8rem;padding-bottom: 50px;;"><i
+                        class="feather-clock"></i> 130 min</span> <span class="float-right text-black-50"> $350 FOR
+                      TWO</span>
+                </div>
+                <!-- <div class="list-card-badge d-flex align-items-center">
+                  <span class="badge badge-danger mr-2">OFFER</span> <small>65% NEW50</small>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="osahan-slider-item py-3 px-1">
+            <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+              <div class="list-card-image">
+                <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                    4.1</span></div>
+                <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                <div class="member-plan position-absolute"><span class="badge badge-warning">Promoted</span></div>
+                <a   >
+                  <img src="../../assets/img/mrdeshee.jpg" class="img-fluid item-img w-100">
+                </a>
+              </div>
+              <div class="p-3 position-relative" style="height: 75px !important;">
+                <div class="list-card-body">
+                  <h6 style="margin-top: -0.5rem;"><a class="text-black">The Journey of Mr. Deshee
+                    </a>
+                  </h6>
+                  <p class="text-gray mb-3">Family / Drama
+                  <p class="text-gray mb-3 time"><span class="bg-light text-dark  " style="margin-left: -8rem;"><i
+                        class="feather-clock"></i> 101 min</span> <span class="float-right text-black-50"> $250 FOR
+                      TWO</span>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="osahan-slider-item py-3 px-1">
+            <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+              <div class="list-card-image">
+                <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                    3.1</span></div>
+                <div class="favourite-heart position-absolute"><a  ><i class="feather-bookmark"></i></a></div>
+                <div class="member-plan position-absolute"><span class="badge badge-info">Ads</span></div>
+                <a>
+                  <img src="../../assets/img/deathclub.jpg" class="img-fluid item-img w-100">
+                </a>
+              </div>
+              <div class="p-3 position-relative" style="height: 75px !important;">
+                <div class="list-card-body">
+                  <h6 style="margin-top: -0.5rem;"><a class="text-black">Death Club
+                    </a>
+                  </h6>
+                  <p class="text-gray mb-3">English Horror
+                  <p class="text-gray mb-3 time"><span class="bg-light text-dark  " style="margin-left: -8rem;"><i
+                        class="feather-clock"></i> 120 min</span> <span class="float-right text-black-50"> $500 FOR
+                      ONE MONTH</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+
+  <div *ngIf="showHome || showKids">
+    <div class="px-3 pt-4 pb-3 title d-flex align-items-center">
+      <h5 class="m-0 font-weight-bold">Popular Kids Shows</h5>
+    </div>
+    <!-- Most popular -->
+    <div class="most_popular px-3" style="padding-bottom: 20%;">
+      <ion-slides pager="false" [options]="BannerOption1" #slideone autoplay="1000"
+        style=" box-shadow: 1px 1px 5px 1px rgb(226, 219, 219);">
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/motupatlu.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Motu Patlu
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Comedy
+                    <p class="text-gray mb-1 rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/chotabheem.webp" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Chota bheem</a></h6>
+                    <p class="text-gray mb-1 small">Comedy
+                    <p class="text-gray mb-1 rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide (click)="openDetails()">
+          <div class="row">
+            <div class="col-6 pr-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <div class="star position-absolute"><span class="badge badge-success"><i class="feather-star"></i>
+                      4.4</span></div>
+
+                  <a>
+                    <img src="../../assets/img/dora.webp" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Dora- the explorer
+                      </a>
+                    </h6>
+                    <p class="text-gray mb-1 small">Comedy | Informatic
+                    <p class="text-gray mb-1 rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pl-1">
+              <div class="list-card bg-white h-100  overflow-hidden position-relative ">
+                <div class="list-card-image">
+                  <a>
+                    <img src="../../assets/img/motupatlu.jpeg" class="img-fluid item-img w-100">
+                  </a>
+                </div>
+                <div class="p-3 position-relative">
+                  <div class="list-card-body">
+                    <h6 class="mb-1"><a class="text-black">Comedy</a></h6>
+                    <p class="text-gray mb-1 small">English Horror
+                    <p class="text-gray mb-1 rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+    
+      </ion-slides>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+</ion-content>
